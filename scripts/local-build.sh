@@ -29,12 +29,12 @@ function download_version() {
   fi
   pushd .
   cd $APP_FILE_DIR
-  wget -O chevereto.zip -L "https://github.com/rodber/chevereto-free/archive/refs/tags/${version}.zip"
+  wget -O chevereto.zip -L "https://github.com/keven1024/chevereto-free-multi-language/archive/refs/tags/${version}.zip"
   unzip -o chevereto.zip
-  unzip_dir="chevereto-free-${version}"
+  unzip_dir="chevereto-free-multi-language-${version}"
   if $latest_version; then
     # This is actually not needed, after we create the sym-link latest, subsequent creation will simply fail
-    ln -s ${unzip_dir} chevereto-free-latest
+    ln -s ${unzip_dir} chevereto-free-multi-language-latest
     latest_version=false
   fi
   rm chevereto.zip

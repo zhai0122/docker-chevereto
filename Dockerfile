@@ -6,7 +6,7 @@ ARG CHEVERETO_VERSION
 FROM composer AS composer
 
 ARG CHEVERETO_VERSION
-COPY app/chevereto-free-${CHEVERETO_VERSION}/ /app/
+COPY app/chevereto-free-multi-language-${CHEVERETO_VERSION}/ /app/
 RUN composer install \
     --working-dir=/app/ \
     --prefer-dist \
